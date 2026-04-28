@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DJ Kicau Mania 🔥</title>
+<title>Gambar Joget Muter</title>
 
 <style>
 *{
@@ -15,69 +15,115 @@ font-family:Arial, sans-serif;
 
 body{
 height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+overflow:hidden;
 background:linear-gradient(135deg,#ff00cc,#ff6600,#00eaff,#00ff55);
 background-size:400% 400%;
 animation:bg 7s infinite alternate;
-overflow:hidden;
+position:relative;
 }
 
+/* Background bergerak */
 @keyframes bg{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
 
-.box{
+/* Judul */
+h1{
+position:absolute;
+top:20px;
+width:100%;
 text-align:center;
+font-size:55px;
+color:white;
+text-shadow:4px 4px 0 black;
+z-index:10;
 }
 
-img{
-width:280px;
-height:280px;
-border-radius:50%;
+/* Gambar utama */
+.gambar{
+position:absolute;
+width:320px;
+height:320px;
 object-fit:cover;
+border-radius:50%;
 border:8px solid white;
-box-shadow:0 15px 35px rgba(0,0,0,.3);
-animation:putar 4s linear infinite;
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+/* animasi jalan + muter */
+animation:
+jalan 8s linear infinite,
+putar 1.5s linear infinite,
+goyang .5s infinite alternate;
 }
 
+/* bergerak keliling layar */
+@keyframes jalan{
+0%   {top:10%; left:0%;}
+25%  {top:10%; left:70%;}
+50%  {top:55%; left:70%;}
+75%  {top:55%; left:0%;}
+100% {top:10%; left:0%;}
+}
+
+/* muter */
 @keyframes putar{
 from{transform:rotate(0deg);}
 to{transform:rotate(360deg);}
 }
 
-h1{
-margin-top:25px;
-font-size:50px;
-color:white;
-text-shadow:3px 3px 0 black;
+/* goyang */
+@keyframes goyang{
+from{scale:1;}
+to{scale:1.08;}
 }
 
-p{
-margin-top:10px;
-font-size:22px;
-color:#fff700;
+/* teks bawah */
+.note{
+position:absolute;
+bottom:30px;
+width:100%;
+text-align:center;
+font-size:28px;
 font-weight:bold;
+color:#fff700;
+text-shadow:2px 2px 0 black;
+}
+
+/* HP */
+@media(max-width:768px){
+
+h1{
+font-size:35px;
+}
+
+.gambar{
+width:220px;
+height:220px;
+}
+
+.note{
+font-size:20px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<div class="box">
+<h1>🔥 DJ KICAU MANIA 🔥</h1>
 
-<img src="fotoku.png">
+<!-- GANTI NAMA FILE SESUAI PUNYAMU -->
+<img src="fotoku.jpeg" class="gambar">
 
-<h1>DJ KICAU MANIA</h1>
-<p>🔥 Buka Link Langsung Jedag Jedug 🔥</p>
-
+<div class="note">
+😭 GAMBAR LAGI JOGET KELILING 😭
 </div>
 
-<!-- AUDIO -->
-<audio autoplay loop controls>
+<!-- MUSIK -->
+<audio autoplay loop controls hidden>
 <source src="lagu.mpeg" type="audio/mpeg">
 </audio>
 
