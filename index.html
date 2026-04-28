@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gambar Muter-Muter</title>
+<title>DJ Kicau Mania 🔥</title>
 
 <style>
 *{
@@ -18,48 +18,40 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(135deg,#ff00cc,#ff6600,#00eaff,#00ff66);
+background:linear-gradient(135deg,#ff00cc,#ff6600,#00eaff,#00ff55);
 background-size:400% 400%;
-animation:bg 6s infinite alternate;
+animation:bg 7s infinite alternate;
 overflow:hidden;
 }
 
-/* Background bergerak */
 @keyframes bg{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
 
-/* Container */
 .box{
 text-align:center;
 }
 
-/* Gambar muter */
-.gambar{
+img{
 width:280px;
 height:280px;
 border-radius:50%;
 object-fit:cover;
-box-shadow:0 15px 35px rgba(0,0,0,0.35);
-animation:putar 4s linear infinite;
 border:8px solid white;
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+animation:putar 4s linear infinite;
 }
 
-/* Animasi putar */
 @keyframes putar{
-from{
-transform:rotate(0deg);
-}
-to{
-transform:rotate(360deg);
-}
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
 }
 
 h1{
-margin-top:30px;
-font-size:45px;
+margin-top:25px;
+font-size:50px;
 color:white;
 text-shadow:3px 3px 0 black;
 }
@@ -69,25 +61,6 @@ margin-top:10px;
 font-size:22px;
 color:#fff700;
 font-weight:bold;
-text-shadow:2px 2px 0 black;
-}
-
-/* HP */
-@media(max-width:768px){
-
-.gambar{
-width:220px;
-height:220px;
-}
-
-h1{
-font-size:34px;
-}
-
-p{
-font-size:18px;
-}
-
 }
 </style>
 </head>
@@ -96,13 +69,17 @@ font-size:18px;
 
 <div class="box">
 
-<!-- GANTI nama file gambar sesuai punyamu -->
-<img src="fotoku.jpeg" class="gambar">
+<img src="gambar.png">
 
 <h1>DJ KICAU MANIA</h1>
-<p>🔥 Gambar Lagi Muter-Muter 🔥</p>
+<p>🔥 Buka Link Langsung Jedag Jedug 🔥</p>
 
 </div>
+
+<!-- AUDIO -->
+<audio autoplay loop>
+<source src="lagu.mpeg" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
